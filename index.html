@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools Directory - Discover the Best AI Tools</title>
+  <meta name="description" content="Discover and explore the best AI tools organized by category. Find the perfect AI solution for your needs.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 font-sofia">
+  <!-- Navbar -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-20" data-id="hero-section">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6" data-id="hero-title">
+        Discover the Best AI Tools
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto" data-id="hero-description">
+        Your ultimate directory for AI-powered solutions. Find the perfect AI tool for every task, organized by category and use case.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+        <div class="relative w-full sm:w-96">
+          <input 
+            type="text" 
+            placeholder="Search AI tools..." 
+            class="w-full px-6 py-4 rounded-full text-gray-800 text-lg focus:outline-none focus:ring-4 focus:ring-white/30"
+            data-id="search-input"
+            id="searchInput"
+          >
+          <button class="absolute right-2 top-2 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors" data-id="search-button">
+            <i data-lucide="search" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-2" data-id="stats-container">
+        <span class="bg-white/20 px-4 py-2 rounded-full" data-id="tools-count">500+ Tools</span>
+        <span class="bg-white/20 px-4 py-2 rounded-full" data-id="categories-count">12 Categories</span>
+        <span class="bg-white/20 px-4 py-2 rounded-full" data-id="updated-info">Updated Daily</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="py-12 bg-white sticky top-0 z-40 shadow-sm" data-id="category-filter-section">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-center gap-3" data-id="category-filters" id="categoryFilters">
+        <button class="category-filter active px-6 py-3 rounded-full border-2 border-blue-600 bg-blue-600 text-white hover:bg-blue-700 transition-all font-semibold" data-category="all" data-id="filter-all">
+          All Tools
+        </button>
+        <button class="category-filter px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all font-semibold" data-category="writing" data-id="filter-writing">
+          Writing
+        </button>
+        <button class="category-filter px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all font-semibold" data-category="design" data-id="filter-design">
+          Design
+        </button>
+        <button class="category-filter px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all font-semibold" data-category="development" data-id="filter-development">
+          Development
+        </button>
+        <button class="category-filter px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all font-semibold" data-category="productivity" data-id="filter-productivity">
+          Productivity
+        </button>
+        <button class="category-filter px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all font-semibold" data-category="marketing" data-id="filter-marketing">
+          Marketing
+        </button>
+        <button class="category-filter px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all font-semibold" data-category="video" data-id="filter-video">
+          Video
+        </button>
+        <button class="category-filter px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all font-semibold" data-category="audio" data-id="filter-audio">
+          Audio
+        </button>
+        <button class="category-filter px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-600 hover:text-blue-600 transition-all font-semibold" data-category="analytics" data-id="filter-analytics">
+          Analytics
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools Grid -->
+  <section class="py-16 bg-gray-50" data-id="tools-grid-section">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" data-id="tools-grid" id="toolsGrid">
+        <!-- Tools will be populated by JavaScript -->
+      </div>
+      
+      <!-- Load More Button -->
+      <div class="text-center mt-12" data-id="load-more-container">
+        <button class="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors font-semibold text-lg" data-id="load-more-button" id="loadMoreBtn">
+          Load More Tools
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="py-16 bg-white" data-id="featured-categories-section">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" data-id="featured-title">
+        Popular Categories
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-id="featured-categories-grid">
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-lg transition-shadow cursor-pointer" data-id="category-card-writing" data-category="writing">
+          <div class="w-16 h-16 mx-auto mb-4 bg-blue-600 rounded-2xl flex items-center justify-center">
+            <i data-lucide="pen-tool" class="w-8 h-8 text-white"></i>
+          </div>
+          <h3 class="font-semibold text-gray-800 mb-2">Writing</h3>
+          <p class="text-sm text-gray-600">AI writing assistants</p>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 hover:shadow-lg transition-shadow cursor-pointer" data-id="category-card-design" data-category="design">
+          <div class="w-16 h-16 mx-auto mb-4 bg-purple-600 rounded-2xl flex items-center justify-center">
+            <i data-lucide="palette" class="w-8 h-8 text-white"></i>
+          </div>
+          <h3 class="font-semibold text-gray-800 mb-2">Design</h3>
+          <p class="text-sm text-gray-600">Creative design tools</p>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 hover:shadow-lg transition-shadow cursor-pointer" data-id="category-card-development" data-category="development">
+          <div class="w-16 h-16 mx-auto mb-4 bg-green-600 rounded-2xl flex items-center justify-center">
+            <i data-lucide="code" class="w-8 h-8 text-white"></i>
+          </div>
+          <h3 class="font-semibold text-gray-800 mb-2">Development</h3>
+          <p class="text-sm text-gray-600">Code assistance tools</p>
+        </div>
+        <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100 hover:shadow-lg transition-shadow cursor-pointer" data-id="category-card-productivity" data-category="productivity">
+          <div class="w-16 h-16 mx-auto mb-4 bg-orange-600 rounded-2xl flex items-center justify-center">
+            <i data-lucide="zap" class="w-8 h-8 text-white"></i>
+          </div>
+          <h3 class="font-semibold text-gray-800 mb-2">Productivity</h3>
+          <p class="text-sm text-gray-600">Workflow automation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    import { initializeApp } from './scripts/app.js';
+    
+    // Load all shared components
+    await loadComponent('#navbar-container');
+    await loadComponent('#footer-container');
+    await loadComponent('#badge-container');
+    
+    // Initialize the app
+    initializeApp();
+    
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>

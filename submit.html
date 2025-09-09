@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Tool - AI Tools Hub</title>
+  <meta name="description" content="Submit your AI tool to AI Tools Hub and reach thousands of potential users. Get featured in our curated directory.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 font-sofia">
+  <!-- Navbar -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 text-white py-20" data-id="submit-hero">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6" data-id="submit-title">
+        Submit Your AI Tool
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto" data-id="submit-description">
+        Get your AI tool featured in our directory and reach thousands of potential users. Join the AI revolution today!
+      </p>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="py-20" data-id="form-section">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+          <form id="submitForm" class="space-y-6" data-id="submit-form">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div data-id="form-group-name">
+                <label for="toolName" class="block text-sm font-semibold text-gray-700 mb-2">Tool Name *</label>
+                <input type="text" id="toolName" name="toolName" required
+                       class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                       placeholder="e.g. ChatGPT">
+              </div>
+              
+              <div data-id="form-group-category">
+                <label for="category" class="block text-sm font-semibold text-gray-700 mb-2">Category *</label>
+                <select id="category" name="category" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                  <option value="">Select Category</option>
+                  <option value="writing">Writing</option>
+                  <option value="design">Design</option>
+                  <option value="development">Development</option>
+                  <option value="productivity">Productivity</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="video">Video</option>
+                  <option value="audio">Audio</option>
+                  <option value="analytics">Analytics</option>
+                </select>
+              </div>
+            </div>
+
+            <div data-id="form-group-url">
+              <label for="toolUrl" class="block text-sm font-semibold text-gray-700 mb-2">Tool URL *</label>
+              <input type="url" id="toolUrl" name="toolUrl" required
+                     class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                     placeholder="https://example.com">
+            </div>
+
+            <div data-id="form-group-description">
+              <label for="description" class="block text-sm font-semibold text-gray-700 mb-2">Description *</label>
+              <textarea id="description" name="description" required rows="4"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        placeholder="Describe what your AI tool does and its key features..."></textarea>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div data-id="form-group-pricing">
+                <label for="pricing" class="block text-sm font-semibold text-gray-700 mb-2">Pricing Model *</label>
+                <select id="pricing" name="pricing" required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                  <option value="">Select Pricing</option>
+                  <option value="Free">Free</option>
+                  <option value="Freemium">Freemium</option>
+                  <option value="Paid">Paid</option>
+                  <option value="Free/Paid">Free/Paid</option>
+                </select>
+              </div>
+              
+              <div data-id="form-group-contact">
+                <label for="contactEmail" class="block text-sm font-semibold text-gray-700 mb-2">Contact Email *</label>
+                <input type="email" id="contactEmail" name="contactEmail" required
+                       class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                       placeholder="your@email.com">
+              </div>
+            </div>
+
+            <div data-id="form-group-tags">
+              <label for="tags" class="block text-sm font-semibold text-gray-700 mb-2">Tags</label>
+              <input type="text" id="tags" name="tags"
+                     class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                     placeholder="e.g. chat, writing, AI assistant (comma separated)">
+              <p class="text-sm text-gray-500 mt-1">Separate tags with commas. Max 5 tags.</p>
+            </div>
+
+            <div data-id="form-group-additional">
+              <label for="additionalInfo" class="block text-sm font-semibold text-gray-700 mb-2">Additional Information</label>
+              <textarea id="additionalInfo" name="additionalInfo" rows="3"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        placeholder="Any additional details about your tool, special features, or requirements..."></textarea>
+            </div>
+
+            <div class="flex items-start space-x-3" data-id="form-group-terms">
+              <input type="checkbox" id="terms" name="terms" required
+                     class="mt-1 w-5 h-5 text-purple-600 border-gray-300 rounded focus:ring-purple-500">
+              <label for="terms" class="text-sm text-gray-600">
+                I agree that the information provided is accurate and I have the right to submit this tool. I understand that submissions are reviewed before being added to the directory. *
+              </label>
+            </div>
+
+            <button type="submit" 
+                    class="w-full bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-purple-700 hover:to-fuchsia-700 transition-all duration-300 transform hover:scale-105"
+                    data-id="submit-button">
+              Submit Tool for Review
+            </button>
+          </form>
+
+          <!-- Success Message -->
+          <div id="successMessage" class="hidden mt-8 p-6 bg-green-50 border border-green-200 rounded-xl" data-id="success-message">
+            <div class="flex items-center">
+              <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mr-3"></i>
+              <div>
+                <h3 class="font-semibold text-green-800">Submission Successful!</h3>
+                <p class="text-green-700">Thank you for submitting your AI tool. We'll review it and get back to you within 2-3 business days.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guidelines Section -->
+  <section class="py-20 bg-white" data-id="guidelines-section">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12" data-id="guidelines-title">
+          Submission Guidelines
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-6" data-id="guidelines-left">
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="check" class="w-5 h-5 text-green-600"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">AI-Powered Tools Only</h3>
+                <p class="text-gray-600">We only accept tools that use artificial intelligence as a core feature.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="check" class="w-5 h-5 text-green-600"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Working Product</h3>
+                <p class="text-gray-600">Your tool should be live and accessible to users, not just a concept or beta.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="check" class="w-5 h-5 text-green-600"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Clear Value Proposition</h3>
+                <p class="text-gray-600">Provide a clear description of what problem your tool solves.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="space-y-6" data-id="guidelines-right">
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="info" class="w-5 h-5 text-blue-600"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Review Process</h3>
+                <p class="text-gray-600">All submissions are manually reviewed for quality and relevance.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="info" class="w-5 h-5 text-blue-600"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Response Time</h3>
+                <p class="text-gray-600">We aim to respond within 2-3 business days with our decision.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i data-lucide="info" class="w-5 h-5 text-blue-600"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-1">Free Listing</h3>
+                <p class="text-gray-600">Basic listings are completely free. Premium features may be available in the future.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { loadComponent, initializeMobileMenu } from './scripts/components/loader.js';
+    import { initializeSubmitForm } from './scripts/submit.js';
+    
+    // Load all shared components
+    await loadComponent('#navbar-container');
+    await loadComponent('#footer-container');
+    await loadComponent('#badge-container');
+    
+    // Initialize mobile menu and form
+    initializeMobileMenu();
+    initializeSubmitForm();
+    
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>

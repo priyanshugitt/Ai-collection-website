@@ -1,0 +1,33 @@
+<nav class="bg-white shadow-lg sticky top-0 z-50" data-id="main-navbar">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <div class="flex items-center space-x-2" data-id="navbar-logo">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+          <i data-lucide="brain-circuit" class="w-6 h-6 text-white"></i>
+        </div>
+        <span class="text-xl font-bold text-gray-800">AI Tools Hub</span>
+      </div>
+      
+      <div class="hidden md:flex items-center space-x-8" data-id="navbar-menu">
+        <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors" data-id="nav-home">Home</a>
+        <a href="categories.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors" data-id="nav-categories">Categories</a>
+        <a href="about.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors" data-id="nav-about">About</a>
+        <a href="submit.html" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium" data-id="nav-submit">Submit Tool</a>
+      </div>
+      
+      <button class="md:hidden p-2" data-id="mobile-menu-toggle" id="mobileMenuToggle">
+        <i data-lucide="menu" class="w-6 h-6 text-gray-600"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" data-id="mobile-menu" id="mobileMenu">
+      <div class="py-4 border-t border-gray-200">
+        <a href="index.html" class="block py-2 text-gray-600 hover:text-blue-600 font-medium transition-colors" data-id="mobile-nav-home">Home</a>
+        <a href="categories.html" class="block py-2 text-gray-600 hover:text-blue-600 font-medium transition-colors" data-id="mobile-nav-categories">Categories</a>
+        <a href="about.html" class="block py-2 text-gray-600 hover:text-blue-600 font-medium transition-colors" data-id="mobile-nav-about">About</a>
+        <a href="submit.html" class="block py-2 bg-blue-600 text-white px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium mt-4" data-id="mobile-nav-submit">Submit Tool</a>
+      </div>
+    </div>
+  </div>
+</nav>
