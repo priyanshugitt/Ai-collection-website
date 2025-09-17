@@ -1,548 +1,348 @@
-// Free AI Tools Database - Only Free Tools
+// AI Tools Database - Free Tools Only
 export const aiTools = [
-  // Writing Tools - Free Only
+  // Writing & Content Tools (Free Only)
   {
-    id: 1,
-    name: "ChatGPT",
-    category: "writing",
-    description: "AI-powered conversational assistant for writing, coding, and general tasks",
-    url: "https://chat.openai.com",
-    rating: 4.8,
-    pricing: "Free",
-    tags: ["chatbot", "writing", "coding", "general-purpose"],
-    featured: true
+    id: 'writesonic-free',
+    name: 'Writesonic',
+    description: 'AI writing assistant with Free tier for content creation',
+    category: 'Writing',
+    pricing: 'Free',
+    website: 'https://writesonic.com',
+    logo: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=64&h=64&fit=crop&crop=center',
+    features: ['Article Writing', 'Blog Posts', 'Social Media Content'],
+    rating: 4.3,
+    reviews: 1250
   },
   {
-    id: 2,
-    name: "Claude",
-    category: "writing",
-    description: "Anthropic's AI assistant for thoughtful conversations and analysis",
-    url: "https://claude.ai",
+    id: 'quillbot',
+    name: 'QuillBot',
+    description: 'Free paraphrasing and grammar checking tool',
+    category: 'Writing',
+    pricing: 'Free',
+    website: 'https://quillbot.com',
+    logo: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=64&h=64&fit=crop&crop=center',
+    features: ['Paraphrasing', 'Grammar Check', 'Summarizer'],
+    rating: 4.2,
+    reviews: 890
+  },
+  {
+    id: 'grammarly-free',
+    name: 'Grammarly',
+    description: 'Free grammar and spell checker',
+    category: 'Writing',
+    pricing: 'Free',
+    website: 'https://grammarly.com',
+    logo: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=64&h=64&fit=crop&crop=center',
+    features: ['Grammar Check', 'Spell Check', 'Basic Writing Suggestions'],
+    rating: 4.5,
+    reviews: 2100
+  },
+
+  // Image Generation Tools (Free Only)
+  {
+    id: 'leonardo-ai-free',
+    name: 'Leonardo.AI',
+    description: 'Free AI image generation with daily credits',
+    category: 'Image Generation',
+    pricing: 'Free',
+    website: 'https://leonardo.ai',
+    logo: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=64&h=64&fit=crop&crop=center',
+    features: ['Image Generation', 'Art Creation', 'Style Transfer'],
+    rating: 4.4,
+    reviews: 765
+  },
+  {
+    id: 'stable-diffusion',
+    name: 'Stable Diffusion Web',
+    description: 'Free open-source AI image generator',
+    category: 'Image Generation',
+    pricing: 'Free',
+    website: 'https://stablediffusionweb.com',
+    logo: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=64&h=64&fit=crop&crop=center',
+    features: ['Text-to-Image', 'Image-to-Image', 'Open Source'],
+    rating: 4.6,
+    reviews: 1320
+  },
+  {
+    id: 'craiyon',
+    name: 'Craiyon',
+    description: 'Free AI image generator, formerly DALL-E mini',
+    category: 'Image Generation',
+    pricing: 'Free',
+    website: 'https://craiyon.com',
+    logo: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=64&h=64&fit=crop&crop=center',
+    features: ['Text-to-Image', 'Creative Art', 'No Registration Required'],
+    rating: 4.1,
+    reviews: 950
+  },
+
+  // Video Tools (Free Only)
+  {
+    id: 'runway-free',
+    name: 'Runway ML',
+    description: 'Free tier for AI video editing and generation',
+    category: 'Video',
+    pricing: 'Free',
+    website: 'https://runwayml.com',
+    logo: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=64&h=64&fit=crop&crop=center',
+    features: ['Video Generation', 'Background Removal', 'Creative Tools'],
+    rating: 4.3,
+    reviews: 680
+  },
+  {
+    id: 'clipchamp',
+    name: 'Clipchamp',
+    description: 'Free video editor with AI features',
+    category: 'Video',
+    pricing: 'Free',
+    website: 'https://clipchamp.com',
+    logo: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=64&h=64&fit=crop&crop=center',
+    features: ['Video Editing', 'Auto Subtitles', 'Templates'],
+    rating: 4.2,
+    reviews: 1100
+  },
+
+  // Audio Tools (Free Only)
+  {
+    id: 'elevenlabs-free',
+    name: 'ElevenLabs',
+    description: 'Free AI voice generation with monthly credits',
+    category: 'Audio',
+    pricing: 'Free',
+    website: 'https://elevenlabs.io',
+    logo: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=64&h=64&fit=crop&crop=center',
+    features: ['Voice Generation', 'Text-to-Speech', 'Voice Cloning'],
+    rating: 4.5,
+    reviews: 890
+  },
+  {
+    id: 'mubert',
+    name: 'Mubert',
+    description: 'Free AI music generation for content creators',
+    category: 'Audio',
+    pricing: 'Free',
+    website: 'https://mubert.com',
+    logo: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=64&h=64&fit=crop&crop=center',
+    features: ['Music Generation', 'Soundtracks', 'Royalty-Free'],
+    rating: 4.1,
+    reviews: 520
+  },
+
+  // Chatbot Tools (Free Only)
+  {
+    id: 'chatgpt-free',
+    name: 'ChatGPT',
+    description: 'Free conversational AI chatbot by OpenAI',
+    category: 'Chatbot',
+    pricing: 'Free',
+    website: 'https://chat.openai.com',
+    logo: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=64&h=64&fit=crop&crop=center',
+    features: ['Conversations', 'Writing Help', 'Code Assistance'],
     rating: 4.7,
-    pricing: "Free",
-    tags: ["chatbot", "analysis", "writing"],
-    featured: true
+    reviews: 5200
   },
   {
-    id: 3,
-    name: "Google Bard",
-    category: "writing",
-    description: "Google's conversational AI for creative and informative tasks",
-    url: "https://bard.google.com",
-    rating: 4.5,
-    pricing: "Free",
-    tags: ["chatbot", "creative", "google"],
-    featured: false
-  },
-  {
-    id: 4,
-    name: "Poe",
-    category: "writing",
-    description: "Access multiple AI models in one platform by Quora",
-    url: "https://poe.com",
+    id: 'bard',
+    name: 'Google Bard',
+    description: 'Free AI chatbot by Google',
+    category: 'Chatbot',
+    pricing: 'Free',
+    website: 'https://bard.google.com',
+    logo: 'https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=64&h=64&fit=crop&crop=center',
+    features: ['Conversations', 'Web Search', 'Creative Writing'],
     rating: 4.4,
-    pricing: "Free",
-    tags: ["multi-model", "chatbot", "platform"],
-    featured: false
+    reviews: 2800
   },
   {
-    id: 5,
-    name: "Perplexity AI",
-    category: "writing",
-    description: "AI-powered search engine with conversational interface",
-    url: "https://perplexity.ai",
+    id: 'claude-free',
+    name: 'Claude',
+    description: 'Free AI assistant by Anthropic',
+    category: 'Chatbot',
+    pricing: 'Free',
+    website: 'https://claude.ai',
+    logo: 'https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=64&h=64&fit=crop&crop=center',
+    features: ['Long Conversations', 'Document Analysis', 'Safe AI'],
     rating: 4.6,
-    pricing: "Free",
-    tags: ["search", "research", "citations"],
-    featured: false
+    reviews: 1450
   },
 
-  // Design Tools - Free Only
+  // Code Tools (Free Only)
   {
-    id: 6,
-    name: "DALL-E 2",
-    category: "design",
-    description: "OpenAI's image generator with free monthly credits",
-    url: "https://openai.com/dall-e-2",
-    rating: 4.7,
-    pricing: "Free",
-    tags: ["image-generation", "art", "openai"],
-    featured: true
-  },
-  {
-    id: 7,
-    name: "Canva AI",
-    category: "design",
-    description: "AI-powered design tools within Canva's free platform",
-    url: "https://canva.com",
+    id: 'github-copilot-free',
+    name: 'GitHub Copilot',
+    description: 'Free for students and open source contributors',
+    category: 'Code',
+    pricing: 'Free',
+    website: 'https://github.com/features/copilot',
+    logo: 'https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=64&h=64&fit=crop&crop=center',
+    features: ['Code Completion', 'AI Programming', 'Multiple Languages'],
     rating: 4.5,
-    pricing: "Free",
-    tags: ["design", "templates", "graphics"],
-    featured: true
+    reviews: 3200
   },
   {
-    id: 8,
-    name: "Craiyon",
-    category: "design",
-    description: "Free AI image generator (formerly DALL-E mini)",
-    url: "https://craiyon.com",
+    id: 'replit-ai',
+    name: 'Replit AI',
+    description: 'Free AI coding assistant in online IDE',
+    category: 'Code',
+    pricing: 'Free',
+    website: 'https://replit.com',
+    logo: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=64&h=64&fit=crop&crop=center',
+    features: ['Code Generation', 'Online IDE', 'Collaboration'],
+    rating: 4.3,
+    reviews: 1800
+  },
+  {
+    id: 'codeium',
+    name: 'Codeium',
+    description: 'Free AI code completion tool',
+    category: 'Code',
+    pricing: 'Free',
+    website: 'https://codeium.com',
+    logo: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=64&h=64&fit=crop&crop=center',
+    features: ['Code Completion', 'Multiple IDEs', 'Fast Suggestions'],
+    rating: 4.4,
+    reviews: 920
+  },
+
+  // Research Tools (Free Only)
+  {
+    id: 'perplexity-free',
+    name: 'Perplexity AI',
+    description: 'Free AI-powered search and research tool',
+    category: 'Research',
+    pricing: 'Free',
+    website: 'https://perplexity.ai',
+    logo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=center',
+    features: ['AI Search', 'Source Citations', 'Research Assistance'],
+    rating: 4.5,
+    reviews: 1650
+  },
+  {
+    id: 'you-com',
+    name: 'You.com',
+    description: 'Free AI search engine with chat features',
+    category: 'Research',
+    pricing: 'Free',
+    website: 'https://you.com',
+    logo: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=64&h=64&fit=crop&crop=center',
+    features: ['AI Search', 'Web Results', 'Chat Interface'],
     rating: 4.2,
-    pricing: "Free",
-    tags: ["image-generation", "free", "accessible"],
-    featured: false
+    reviews: 780
+  },
+
+  // Productivity Tools (Free Only)
+  {
+    id: 'notion-ai-free',
+    name: 'Notion AI',
+    description: 'Free AI features in Notion workspace',
+    category: 'Productivity',
+    pricing: 'Free',
+    website: 'https://notion.so',
+    logo: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=64&h=64&fit=crop&crop=center',
+    features: ['Writing Assistant', 'Summarization', 'Content Generation'],
+    rating: 4.4,
+    reviews: 2400
   },
   {
-    id: 9,
-    name: "Leonardo AI",
-    category: "design",
-    description: "Free AI art generator with daily credits",
-    url: "https://leonardo.ai",
+    id: 'otter-ai-free',
+    name: 'Otter.ai',
+    description: 'Free AI transcription service',
+    category: 'Productivity',
+    pricing: 'Free',
+    website: 'https://otter.ai',
+    logo: 'https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=64&h=64&fit=crop&crop=center',
+    features: ['Audio Transcription', 'Meeting Notes', 'Voice Recording'],
+    rating: 4.3,
+    reviews: 1560
+  },
+
+  // Design Tools (Free Only)
+  {
+    id: 'canva-ai-free',
+    name: 'Canva AI',
+    description: 'Free AI design features in Canva',
+    category: 'Design',
+    pricing: 'Free',
+    website: 'https://canva.com',
+    logo: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=64&h=64&fit=crop&crop=center',
+    features: ['AI Design', 'Magic Resize', 'Background Remover'],
+    rating: 4.5,
+    reviews: 3800
+  },
+  {
+    id: 'remove-bg',
+    name: 'Remove.bg',
+    description: 'Free AI background removal tool',
+    category: 'Design',
+    pricing: 'Free',
+    website: 'https://remove.bg',
+    logo: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=64&h=64&fit=crop&crop=center',
+    features: ['Background Removal', 'Instant Processing', 'High Quality'],
     rating: 4.6,
-    pricing: "Free",
-    tags: ["art", "generation", "credits"],
-    featured: false
-  },
-  {
-    id: 10,
-    name: "Playground AI",
-    category: "design",
-    description: "Free AI image generator with various models",
-    url: "https://playgroundai.com",
-    rating: 4.4,
-    pricing: "Free",
-    tags: ["image-generation", "models", "playground"],
-    featured: false
+    reviews: 2200
   },
 
-  // Development Tools - Free Only
+  // Business Tools (Free Only)
   {
-    id: 11,
-    name: "GitHub Copilot",
-    category: "development",
-    description: "Free for students and open source contributors",
-    url: "https://github.com/features/copilot",
-    rating: 4.8,
-    pricing: "Free",
-    tags: ["coding", "github", "autocomplete"],
-    featured: true
-  },
-  {
-    id: 12,
-    name: "Replit AI",
-    category: "development",
-    description: "AI coding assistant in online IDE with free tier",
-    url: "https://replit.com",
-    rating: 4.5,
-    pricing: "Free",
-    tags: ["ide", "coding", "collaboration"],
-    featured: true
-  },
-  {
-    id: 13,
-    name: "CodePen AI",
-    category: "development",
-    description: "AI assistance for web development in CodePen",
-    url: "https://codepen.io",
-    rating: 4.3,
-    pricing: "Free",
-    tags: ["web-dev", "frontend", "playground"],
-    featured: false
-  },
-  {
-    id: 14,
-    name: "Sourcegraph Cody",
-    category: "development",
-    description: "Free AI coding assistant with context awareness",
-    url: "https://sourcegraph.com/cody",
-    rating: 4.4,
-    pricing: "Free",
-    tags: ["coding", "context", "assistant"],
-    featured: false
-  },
-  {
-    id: 15,
-    name: "Blackbox AI",
-    category: "development",
-    description: "Free AI code generation and search",
-    url: "https://blackbox.ai",
+    id: 'tome-free',
+    name: 'Tome',
+    description: 'Free AI presentation maker',
+    category: 'Business',
+    pricing: 'Free',
+    website: 'https://tome.app',
+    logo: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=64&h=64&fit=crop&crop=center',
+    features: ['AI Presentations', 'Storytelling', 'Interactive Content'],
     rating: 4.2,
-    pricing: "Free",
-    tags: ["code-search", "generation", "free"],
-    featured: false
-  },
-
-  // Productivity Tools - Free Only
-  {
-    id: 16,
-    name: "Notion AI",
-    category: "productivity",
-    description: "AI writing assistance in Notion with free trial",
-    url: "https://notion.so",
-    rating: 4.6,
-    pricing: "Free",
-    tags: ["notes", "writing", "workspace"],
-    featured: true
+    reviews: 680
   },
   {
-    id: 17,
-    name: "Otter.ai",
-    category: "productivity",
-    description: "Free AI transcription with monthly limits",
-    url: "https://otter.ai",
-    rating: 4.5,
-    pricing: "Free",
-    tags: ["transcription", "meetings", "notes"],
-    featured: true
-  },
-  {
-    id: 18,
-    name: "Google Workspace AI",
-    category: "productivity",
-    description: "AI features in free Google Workspace tools",
-    url: "https://workspace.google.com",
+    id: 'loom-ai-free',
+    name: 'Loom AI',
+    description: 'Free AI features for video messaging',
+    category: 'Business',
+    pricing: 'Free',
+    website: 'https://loom.com',
+    logo: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=64&h=64&fit=crop&crop=center',
+    features: ['Video Transcription', 'Auto Titles', 'Video Summaries'],
     rating: 4.4,
-    pricing: "Free",
-    tags: ["google", "workspace", "productivity"],
-    featured: false
-  },
-  {
-    id: 19,
-    name: "Microsoft Copilot",
-    category: "productivity",
-    description: "Free AI assistant in Microsoft Edge and Bing",
-    url: "https://copilot.microsoft.com",
-    rating: 4.3,
-    pricing: "Free",
-    tags: ["microsoft", "assistant", "search"],
-    featured: false
-  },
-  {
-    id: 20,
-    name: "Todoist AI",
-    category: "productivity",
-    description: "AI task organization in free Todoist plan",
-    url: "https://todoist.com",
-    rating: 4.2,
-    pricing: "Free",
-    tags: ["tasks", "organization", "planning"],
-    featured: false
-  },
-
-  // Marketing Tools - Free Only
-  {
-    id: 21,
-    name: "Buffer AI Assistant",
-    category: "marketing",
-    description: "Free AI content suggestions in Buffer",
-    url: "https://buffer.com",
-    rating: 4.3,
-    pricing: "Free",
-    tags: ["social-media", "content", "scheduling"],
-    featured: true
-  },
-  {
-    id: 22,
-    name: "Canva Magic Write",
-    category: "marketing",
-    description: "Free AI copywriting tool in Canva",
-    url: "https://canva.com/magic-write",
-    rating: 4.4,
-    pricing: "Free",
-    tags: ["copywriting", "content", "design"],
-    featured: false
-  },
-  {
-    id: 23,
-    name: "Google Analytics Intelligence",
-    category: "marketing",
-    description: "Free AI insights in Google Analytics",
-    url: "https://analytics.google.com",
-    rating: 4.5,
-    pricing: "Free",
-    tags: ["analytics", "insights", "google"],
-    featured: false
-  },
-  {
-    id: 24,
-    name: "Meta AI Studio",
-    category: "marketing",
-    description: "Free AI tools for Facebook and Instagram marketing",
-    url: "https://aistudio.instagram.com",
-    rating: 4.2,
-    pricing: "Free",
-    tags: ["social-media", "meta", "instagram"],
-    featured: false
-  },
-  {
-    id: 25,
-    name: "LinkedIn AI Writing",
-    category: "marketing",
-    description: "Free AI writing assistance on LinkedIn",
-    url: "https://linkedin.com",
-    rating: 4.3,
-    pricing: "Free",
-    tags: ["linkedin", "writing", "professional"],
-    featured: false
-  },
-
-  // Video Tools - Free Only
-  {
-    id: 26,
-    name: "RunwayML",
-    category: "video",
-    description: "Free tier for AI video generation and editing",
-    url: "https://runwayml.com",
-    rating: 4.6,
-    pricing: "Free",
-    tags: ["video-generation", "editing", "ai"],
-    featured: true
-  },
-  {
-    id: 27,
-    name: "Clipchamp AI",
-    category: "video",
-    description: "Free AI video editing tools by Microsoft",
-    url: "https://clipchamp.com",
-    rating: 4.4,
-    pricing: "Free",
-    tags: ["video-editing", "microsoft", "templates"],
-    featured: false
-  },
-  {
-    id: 28,
-    name: "Kapwing AI",
-    category: "video",
-    description: "Free AI-powered video editing platform",
-    url: "https://kapwing.com",
-    rating: 4.3,
-    pricing: "Free",
-    tags: ["video-editing", "memes", "social"],
-    featured: false
-  },
-  {
-    id: 29,
-    name: "OpenShot",
-    category: "video",
-    description: "Free open-source video editor with AI features",
-    url: "https://openshot.org",
-    rating: 4.2,
-    pricing: "Free",
-    tags: ["open-source", "editing", "free"],
-    featured: false
-  },
-  {
-    id: 30,
-    name: "DaVinci Resolve AI",
-    category: "video",
-    description: "Professional video editor with free AI features",
-    url: "https://blackmagicdesign.com/products/davinciresolve",
-    rating: 4.7,
-    pricing: "Free",
-    tags: ["professional", "editing", "color"],
-    featured: false
-  },
-
-  // Audio Tools - Free Only
-  {
-    id: 31,
-    name: "ElevenLabs",
-    category: "audio",
-    description: "Free monthly credits for AI voice synthesis",
-    url: "https://elevenlabs.io",
-    rating: 4.8,
-    pricing: "Free",
-    tags: ["voice-synthesis", "tts", "realistic"],
-    featured: true
-  },
-  {
-    id: 32,
-    name: "Mubert",
-    category: "audio",
-    description: "Free AI music generation with limitations",
-    url: "https://mubert.com",
-    rating: 4.3,
-    pricing: "Free",
-    tags: ["music-generation", "royalty-free", "ambient"],
-    featured: false
-  },
-  {
-    id: 33,
-    name: "Audacity AI",
-    category: "audio",
-    description: "Free open-source audio editor with AI plugins",
-    url: "https://audacityteam.org",
-    rating: 4.5,
-    pricing: "Free",
-    tags: ["open-source", "editing", "plugins"],
-    featured: false
-  },
-  {
-    id: 34,
-    name: "Adobe Podcast AI",
-    category: "audio",
-    description: "Free AI audio enhancement tools",
-    url: "https://podcast.adobe.com",
-    rating: 4.4,
-    pricing: "Free",
-    tags: ["podcast", "enhancement", "adobe"],
-    featured: false
-  },
-  {
-    id: 35,
-    name: "Speechify",
-    category: "audio",
-    description: "Free text-to-speech with daily limits",
-    url: "https://speechify.com",
-    rating: 4.2,
-    pricing: "Free",
-    tags: ["text-to-speech", "reading", "accessibility"],
-    featured: false
-  },
-
-  // Analytics Tools - Free Only
-  {
-    id: 36,
-    name: "Google Analytics 4",
-    category: "analytics",
-    description: "Free web analytics with AI insights",
-    url: "https://analytics.google.com",
-    rating: 4.6,
-    pricing: "Free",
-    tags: ["web-analytics", "google", "insights"],
-    featured: true
-  },
-  {
-    id: 37,
-    name: "Microsoft Clarity",
-    category: "analytics",
-    description: "Free website heatmaps and session recordings",
-    url: "https://clarity.microsoft.com",
-    rating: 4.5,
-    pricing: "Free",
-    tags: ["heatmaps", "sessions", "microsoft"],
-    featured: false
-  },
-  {
-    id: 38,
-    name: "Plausible Analytics",
-    category: "analytics",
-    description: "Privacy-focused analytics with free trial",
-    url: "https://plausible.io",
-    rating: 4.4,
-    pricing: "Free",
-    tags: ["privacy", "lightweight", "gdpr"],
-    featured: false
-  },
-  {
-    id: 39,
-    name: "Umami Analytics",
-    category: "analytics",
-    description: "Free open-source web analytics",
-    url: "https://umami.is",
-    rating: 4.3,
-    pricing: "Free",
-    tags: ["open-source", "privacy", "simple"],
-    featured: false
-  },
-  {
-    id: 40,
-    name: "Fathom Analytics",
-    category: "analytics",
-    description: "Simple analytics with free tier",
-    url: "https://usefathom.com",
-    rating: 4.2,
-    pricing: "Free",
-    tags: ["simple", "privacy", "fast"],
-    featured: false
+    reviews: 1900
   }
 ];
 
-// Category definitions remain the same
+// Categories for filtering
 export const categories = [
-  {
-    id: 'writing',
-    name: 'Writing & Content',
-    description: 'AI tools for writing, editing, and content creation',
-    icon: 'pen-tool',
-    count: 5,
-    color: 'bg-blue-500'
-  },
-  {
-    id: 'design',
-    name: 'Design & Art',
-    description: 'AI-powered design and image generation tools',
-    icon: 'palette',
-    count: 5,
-    color: 'bg-purple-500'
-  },
-  {
-    id: 'development',
-    name: 'Development',
-    description: 'AI coding assistants and development tools',
-    icon: 'code',
-    count: 5,
-    color: 'bg-green-500'
-  },
-  {
-    id: 'productivity',
-    name: 'Productivity',
-    description: 'AI tools to boost your productivity and efficiency',
-    icon: 'zap',
-    count: 5,
-    color: 'bg-yellow-500'
-  },
-  {
-    id: 'marketing',
-    name: 'Marketing',
-    description: 'AI tools for marketing and social media',
-    icon: 'trending-up',
-    count: 5,
-    color: 'bg-red-500'
-  },
-  {
-    id: 'video',
-    name: 'Video & Animation',
-    description: 'AI-powered video creation and editing tools',
-    icon: 'video',
-    count: 5,
-    color: 'bg-indigo-500'
-  },
-  {
-    id: 'audio',
-    name: 'Audio & Music',
-    description: 'AI tools for audio processing and music generation',
-    icon: 'headphones',
-    count: 5,
-    color: 'bg-pink-500'
-  },
-  {
-    id: 'analytics',
-    name: 'Analytics & Data',
-    description: 'AI-driven analytics and data insights tools',
-    icon: 'bar-chart',
-    count: 5,
-    color: 'bg-teal-500'
-  }
+  'All',
+  'Writing',
+  'Image Generation',
+  'Video',
+  'Audio',
+  'Chatbot',
+  'Code',
+  'Research',
+  'Productivity',
+  'Design',
+  'Business'
 ];
 
-// Utility functions
+// Get tools by category
 export function getToolsByCategory(category) {
+  if (category === 'All') {
+    return aiTools;
+  }
   return aiTools.filter(tool => tool.category === category);
 }
 
-export function getFeaturedTools() {
-  return aiTools.filter(tool => tool.featured);
-}
-
+// Search tools
 export function searchTools(query) {
-  const searchQuery = query.toLowerCase();
-  return aiTools.filter(tool => 
-    tool.name.toLowerCase().includes(searchQuery) ||
-    tool.description.toLowerCase().includes(searchQuery) ||
-    tool.tags.some(tag => tag.toLowerCase().includes(searchQuery))
+  const searchTerm = query.toLowerCase();
+  return aiTools.filter(tool =>
+    tool.name.toLowerCase().includes(searchTerm) ||
+    tool.description.toLowerCase().includes(searchTerm) ||
+    tool.features.some(feature => feature.toLowerCase().includes(searchTerm))
   );
 }
 
+// Get tool by ID
 export function getToolById(id) {
-  return aiTools.find(tool => tool.id === parseInt(id));
+  return aiTools.find(tool => tool.id === id);
 }
